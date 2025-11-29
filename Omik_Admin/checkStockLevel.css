@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    padding: 8px 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.low-stock {
+    background-color: #ffe5e5;
+}
+
+.in-stock {
+    background-color: #e8f5e9;
+}
+
+.low-stock td:last-child {
+    color: red;
+    font-weight: bold;
+}
+
+.in-stock td:last-child {
+    color: green;
+    font-weight: bold;
+}
+
+.back-btn {
+    margin-top: 20px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: #0d6efd;
+}

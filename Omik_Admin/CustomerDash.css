@@ -1,0 +1,85 @@
+/* ===== Body & Background ===== */
+body {
+ 
+  min-height: 100vh;
+  background: url('https://t4.ftcdn.net/jpg/02/94/26/33/360_F_294263329_1IgvqNgDbhmQNgDxkhlW433uOFuIDar4.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 220px;
+  background: #a54501ff;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+.sidebar h2 { font-size: 20px; margin-bottom: 20px; text-align:center; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.sidebar ul li:hover { background: rgba(255,255,255,0.2); }
+
+/* ===== Main Content ===== */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+/* ===== Topbar ===== */
+.topbar {
+  background: linear-gradient(135deg,#cc5400, #004080);
+  padding: 12px 20px;
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.topbar a { color: #fff; font-weight:500; }
+.topbar a:hover { text-decoration: underline; }
+
+/* ===== Food Cards ===== */
+.food-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+.food-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.food-card:hover { transform: translateY(-5px); }
+.food-card img { width:100%; height:160px; object-fit: cover; }
+.food-card .info { padding: 10px; }
+.food-card h3 { margin:0 0 5px 0; font-size: 18px; }
+.food-card p { font-size: 14px; color: #555; height: 40px; overflow: hidden; }
+.food-card span { font-weight: bold; color: #a54501ff; }
+
+/* ===== Customer Profile Modal ===== */
+.modal-content { border-radius: 12px; padding: 20px; }
+.modal-body form .form-label { font-weight: 500; }
+.modal-body form .form-control { margin-bottom: 12px; }
+
+/* ===== Responsive ===== */
+@media screen and (max-width:768px){
+  .sidebar{width:100%; height:auto; position:relative;}
+  .main-content{margin-left:0;}
+  .topbar{flex-direction:column;}
+}
+@media screen and (max-width:480px){
+  .food-card img{height:120px;}
+}
+/* ===== Dashboard Container ===== */

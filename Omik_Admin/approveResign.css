@@ -1,0 +1,99 @@
+/* General body and container */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+/* Back button */
+.button-back {
+    padding: 10px 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.button-back:hover {
+    background: #0056b3;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid #e2e8f0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+}
+
+/* Status colors */
+.status-Pending { color: orange; font-weight: bold; }
+.status-Approved { color: green; font-weight: bold; }
+.status-Rejected { color: red; font-weight: bold; }
+
+/* Action buttons */
+.action-btn {
+    display: inline-block;       /* Make sure padding works */
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;       /* Remove underline */
+}
+
+.approve {
+    background: green;
+}
+.approve:hover {
+    background: darkgreen;
+}
+
+.reject {
+    background: red;
+}
+.reject:hover {
+    background: darkred;
+}

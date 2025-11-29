@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="CustomerDash.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Customer Dashboard</h2>
+    <ul>
+      <li onclick="openPage('search')">Search Available Room</li>
+      <li onclick="openPage('reserve')">Make Reservation</li>
+      <li onclick="openPage('viewBooking')">View Booking</li>
+      <li onclick="openPage('updateBooking')">Update Booking</li>
+      <li onclick="openPage('cancelBooking')">Cancel Booking</li>
+      <li onclick="openPage('feedback')">Give Feedback</li>
+      <li onclick="openPage('order')">Place Order</li>
+      <li onclick="openPage('roomService')">Request Room Services</li>
+      <li onclick="openPage('delivery')">View Delivery Status</li>
+      <li onclick="openPage('history')">View Order History</li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <div class="main-content">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Feedback</a>
+    </header>
+
+    <!-- Food cards -->
+    <main class="food-dashboard" id="foodDashboard">
+      <!-- Food cards will be inserted here by JS -->
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script src="food.js"></script>
+</body>
+</html>

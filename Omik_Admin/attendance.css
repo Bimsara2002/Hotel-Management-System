@@ -1,0 +1,27 @@
+* { box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; }
+body { background:#f4f6f8; }
+.dashboard-container { display:flex; min-height:100vh; }
+
+/* Sidebar */
+.sidebar { width:220px; background:#007bff; color:#fff; padding:20px; flex-shrink:0; }
+.sidebar-header { text-align:center; margin-bottom:30px; }
+.sidebar-header h2 { margin-bottom:5px; }
+.sidebar ul { list-style:none; padding:0; }
+.sidebar ul li, .sidebar ul li a { display:block; padding:12px 10px; margin-bottom:5px; color:#fff; text-decoration:none; border-radius:5px; cursor:pointer; }
+.sidebar ul li.active, .sidebar ul li a:hover { background:#0056b3; }
+
+/* Main Content */
+.main-content { flex-grow:1; padding:30px; }
+h2 { margin-bottom:20px; color:#333; }
+
+/* Filter */
+.date-filter { margin-bottom:20px; }
+.date-filter input[type="date"] { padding:8px; margin-right:10px; border:1px solid #ccc; border-radius:5px; }
+.date-filter button { padding:8px 12px; background:#007bff; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+.date-filter button:hover { background:#0056b3; }
+
+/* Table */
+table { width:100%; border-collapse:collapse; background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+table th, table td { padding:12px 15px; text-align:left; border-bottom:1px solid #ddd; }
+table th { background:#007bff; color:#fff; }
+table tr:hover { background:#f1f1f1; }
