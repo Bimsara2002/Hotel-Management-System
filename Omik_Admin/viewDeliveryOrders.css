@@ -1,0 +1,138 @@
+/* General Page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+.back-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Success & Error Messages */
+.success {
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.error {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Filter Form */
+form label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+form select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+table th, table td {
+    padding: 12px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+table th {
+    background-color: #34495e;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tbody tr:hover {
+    background-color: #f1f3f6;
+    transition: 0.2s;
+}
+
+/* Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #e67e22;
+}
+.status-assigned {
+    background-color: #27ae60;
+}
+.status-delivered {
+    background-color: #3498db;
+}
+.status-cancelled {
+    background-color: #e74c3c;
+}
+
+/* Assign Button */
+.updateBtn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.updateBtn:hover {
+    background-color: #1e8449;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    table th, table td {
+        font-size: 0.85rem;
+        padding: 8px 6px;
+    }
+    form select, .updateBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

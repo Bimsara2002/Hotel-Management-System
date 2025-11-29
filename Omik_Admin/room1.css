@@ -1,0 +1,276 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  display: flex;
+}
+
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg,#cc5400, #004080);
+  color: #fff;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-right a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #ffd700;
+}
+
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #403d3d;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #444;
+  transform: translateX(5px);
+}
+
+/* === Main Content === */
+.main-content {
+  margin-left: 260px;
+  margin-top: 80px;
+  padding: 25px;
+  width: calc(100% - 260px);
+}
+
+.welcome {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome h1 {
+  font-size: 28px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  font-size: 16px;
+  color: #555;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary {
+  background: #0066cc;
+  color: white;
+}
+
+.btn-secondary {
+  background: #28a745;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Room Cards === */
+.room-preview {
+  margin-top: 40px;
+}
+
+.room-preview h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.room-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.room-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+.room-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.room-card h3 {
+  margin: 15px 0 5px;
+  color: #004080;
+}
+
+.room-card p {
+  padding: 0 15px;
+  font-size: 14px;
+  color: #666;
+  min-height: 50px;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: #e67e22;
+  margin: 10px 0;
+}
+
+.btn-book {
+  background: #ff9800;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.btn-book:hover {
+  background: #e68900;
+}
+
+/* === Offers Section === */
+.offers {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.offers h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.offer-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.offer-card {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.offer-card h3 {
+  color: #b71c1c;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.offer-valid {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-offer {
+  background: #c62828;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.btn-offer:hover {
+  background: #b71c1c;
+}

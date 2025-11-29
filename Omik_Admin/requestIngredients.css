@@ -1,0 +1,130 @@
+/* ===== General ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f8fa;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* ===== Two Columns ===== */
+.row-cols {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.col-left, .col-right {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.col-left {
+    flex: 1 1 350px;
+}
+
+.col-right {
+    flex: 2 1 600px;
+    overflow-x: auto;
+}
+
+/* ===== Form Styling ===== */
+form .form-control, form .form-select {
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+table th {
+    background-color: #34495e;
+    color: #fff;
+}
+
+table tbody tr:hover {
+    background-color: #f1f3f6;
+    transition: 0.2s;
+}
+
+/* ===== Status Coloring ===== */
+.status-pending { color: #e67e22; font-weight: 600; }
+.status-approved { color: #27ae60; font-weight: 600; }
+.status-rejected { color: #c0392b; font-weight: 600; }
+
+/* ===== Buttons ===== */
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .row-cols {
+        flex-direction: column;
+    }
+}
+@media (max-width: 576px) {
+    table th, table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Back Button Styling */
+.back-btn {
+    display: inline-block;
+    background-color: #007bff;   /* Blue color */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.back-btn:active {
+    transform: translateY(1px);
+    background-color: #00408a;
+}
+.back-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

@@ -1,0 +1,207 @@
+/* ===== Global Styles ===== */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== Main Container ===== */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===== Back Button ===== */
+.back-btn-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* ===== Main Content ===== */
+.main-content h2 {
+    text-align: center;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* ===== Filter Form ===== */
+.filter-form {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-form select,
+.filter-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.filter-form select:focus,
+.filter-form input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.filter-form button {
+    padding: 10px 16px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.filter-form button:hover {
+    background: linear-gradient(90deg, #0056b3, #0095ff);
+    transform: scale(1.05);
+}
+
+/* ===== Average Ratings ===== */
+.avg-ratings {
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #e9f7ef, #d4f1de);
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #28a745;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.avg-ratings h5 {
+    color: #155724;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.avg-ratings ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.avg-ratings li {
+    padding: 6px 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+.star {
+    color: #ffc107;
+    font-size: 1.1em;
+}
+
+/* ===== Table Styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+table thead {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+    transition: 0.2s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9fbff;
+}
+
+table tbody tr:hover {
+    background-color: #eef5ff;
+    transform: scale(1.01);
+}
+
+table td .star-text {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        padding: 12px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border: none;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #007bff;
+    }
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  

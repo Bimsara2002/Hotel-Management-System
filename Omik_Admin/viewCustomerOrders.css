@@ -1,0 +1,165 @@
+/* ===== General Page Styling ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* ===== Container ===== */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+/* ===== Filter Styling ===== */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filter-container label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.filter-container select {
+    width: 220px;
+    border-radius: 8px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.filter-container select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead th {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+}
+
+table tbody td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+table tbody tr:hover {
+    background-color: #d1d4d6;
+    transition: 0.2s;
+}
+
+/* ===== Buttons ===== */
+.updateBtn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.updateBtn:hover {
+    background-color: #2980b9;
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+/* ===== Status Selects ===== */
+.statusSelect {
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+/* Status colors */
+.status-pending { background-color: #f1c40f; }       /* Yellow */
+.status-completed { background-color: #27ae60; }     /* Green */
+.status-cancelled { background-color: #e74c3c; }     /* Red */
+.status-inprogress { background-color: #3498db; }      /* Blue */
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-container select {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.back-btn:focus {
+    outline: none;
+}
