@@ -1,0 +1,94 @@
+/* Container styling */
+.cart-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Back button fixed styling */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: 500;
+}
+
+/* Table styling */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.cart-item img {
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Input quantity styling */
+.updateQty {
+    text-align: center;
+}
+
+/* Delete button hover effect */
+.deleteBtn {
+    transition: 0.2s;
+}
+
+.deleteBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Grand total styling */
+.cart-total {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Checkout button styling */
+.btn-success {
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-success:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+    .table tr {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+    }
+    .cart-item {
+        display: flex;
+        align-items: center;
+    }
+}

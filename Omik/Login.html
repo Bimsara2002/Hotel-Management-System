@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omik Restaurant - Customer Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* ===== Body & Background ===== */
+body {
+  background: url('https://t3.ftcdn.net/jpg/02/05/87/60/360_F_205876015_hYYs7ugqoU8QAobSS3TbnGQ92qyS5gEc.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Heading ===== */
+h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== Buttons ===== */
+.btn-custom,
+.btn-success {
+  font-weight: 600;
+  padding: 14px 40px;
+  margin: 10px;
+  border-radius: 50px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-custom {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.btn-custom:hover {
+  background-color: #084298;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background-color: #198754;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #146c43;
+  transform: translateY(-2px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0d6efd;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar a {
+    margin: 8px 0;
+  }
+}
+
+/* ===== Modal Styling ===== */
+.modal-content {
+  border-radius: 20px;
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.btn-close {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+
+/* ===== Form Inputs ===== */
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13,110,253,0.5);
+}
+
+/* ===== Buttons inside modals ===== */
+.modal button.btn {
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 12px 0;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.modal button.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive adjustments ===== */
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 28px;
+  }
+  .btn-custom,
+  .btn-success {
+    width: 70%;
+    padding: 12px 0;
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE_SDa38sUEFcvtyP1PI2_Q7trbftFTGSOqA&s" alt="Logo">
+      Omik Restaurant
+    </a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Feedback</a>
+  </div>
+</nav>
+
+<div style="margin-top: 100px; text-align: center;">
+  <h1>Welcome to Omik Family Restaurant</h1>
+
+  <!-- Buttons -->
+  <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#customerLoginModal">Customer Login</button>
+  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#customerRegisterModal">Customer Register</button>
+</div>
+
+<!-- ===== Customer Login Modal ===== -->
+<div class="modal fade" id="customerLoginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Customer Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="customerLoginForm">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="customerEmail" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="customerPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Customer Register Modal ===== -->
+<div class="modal fade" id="customerRegisterModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Customer Registration</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="customerRegisterForm">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Contact</label>
+            <input type="text" class="form-control" name="contact">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" name="address" rows="2"></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="registerPassword" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" name="confirm_password" id="confirmPassword" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// ===== Customer Login =====
+document.getElementById("customerLoginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  let email = document.getElementById("customerEmail").value;
+  let password = document.getElementById("customerPassword").value;
+
+  fetch('Login.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if(data.status === 'success') window.location.href = 'CustomerDashBoard.php';
+  })
+  .catch(err => console.error(err));
+});
+
+// ===== Customer Register =====
+document.getElementById("customerRegisterForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  let form = e.target;
+  let password = form.password.value;
+  let confirmPassword = form.confirm_password.value;
+
+  if(password !== confirmPassword){
+    alert("❌ Passwords do not match!");
+    return;
+  }
+
+  let formData = new URLSearchParams(new FormData(form));
+
+  fetch('customer_register.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    if(data.status === 'success'){
+      form.reset();
+      var registerModal = bootstrap.Modal.getInstance(document.getElementById('customerRegisterModal'));
+      registerModal.hide();
+    }
+  })
+  .catch(err => console.error(err));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* deliveryStatus.css */
+
+body {
+    background: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.orders-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.order-header h5 {
+    margin: 0;
+}
+
+.items-list {
+    margin-top: 10px;
+}
+
+.badge {
+    font-size: 0.9em;
+}
+
+.status-badge {
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 0.3em 0.6em;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.status-pending {
+    background: #ffc107;
+    color: #212529;
+}
+
+.status-delivered {
+    background: #28a745;
+    color: #fff;
+}
+
+.status-inprogress {
+    background: #17a2b8;
+    color: #fff;
+}
+
+.status-cancelled {
+    background: #dc3545;
+    color: #fff;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#backButton button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-bottom: 10px;
+}
